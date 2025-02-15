@@ -5,8 +5,10 @@ public class out{
         int sum = a + b;
         System.out.print(sum);
         int diff = b - a;
-        System.out.print(diff)
+        System.out.print(diff);
         int mul = a * b;
         System.out.print(mul);
     }
-    }   
+    
+    
+}   
