@@ -10,7 +10,7 @@ class Rectengal{
         isFilled = false;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter one if you wont costumisi rect /n Enter any other key for Defult");
+        System.out.println("Enter 1 if you wont costumisi rect /n Enter any other key for Defult");
         int temp = sc.nextInt();
 
         if(temp==1){
@@ -46,6 +46,27 @@ class Rectengal{
             }
             System.out.println("");
         }
+    }
+    public void changeLength(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number you went to change length : ");
+        int temp2 = sc.nextInt();
+        length = length + (temp2);
+        print();
+    }
+    public void changeWidth(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number you went to change width : ");
+        int temp2 = sc.nextInt();
+        length = length + (temp2);
+        print();
+    }
+    public void changeFilled(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter true if you filled rectangle or Enter false if you want regular rectangale  : ");
+        boolean temp2 = sc.nextBoolean();
+        isFilled = temp2; 
+        print();
     }
 }
 public class PatternPrect {
