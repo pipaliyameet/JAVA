@@ -13,7 +13,7 @@ class UserAccount{
         username = sc.nextLine();
         System.out.print("Enter user mail id : ");
         userMailId = sc.nextLine();
-        System.out.print("Enter account mode : ");
+        System.out.print("Enter account mode (student or saveing): ");
         accountmode = sc.nextLine();
         System.out.print("Enter user age : ");
         userage = sc.nextInt();
@@ -42,18 +42,20 @@ class UserAccount{
         System.out.println("user account balence = "+accountBalence);
 
         Change();
-
     }
     public void Change(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("if you withdraw mony so enter a 0 or if you invest mony so enter 1 :");
-        
+        System.out.println("if you withdraw mony so enter a 0 or if you invest mony so enter 1 or if you check your account balance so you enter 2 :");
         int temp = sc.nextInt(); 
+
         if(temp==0){
             withdraw();
         }
         else if(temp==1){
             invest();
+        }
+        else if(temp==2){
+            check();
         }
     }
     public void withdraw(){
@@ -61,18 +63,18 @@ class UserAccount{
         System.out.print("Enter withdraw amount : ");
         int temp = sc.nextInt();
         int temp1 = accountBalence-temp;
-        if(temp1<=1000 || temp1>0){
+        if(temp1>0 && temp1<=1000){
             System.out.println("if you withdraw this amount then your account balence is under 1001 so you do not withdraw this amount");
         } 
         else if(temp1<0){
             System.out.println("insufficiant balance");
         }
         else{
-            accountBalence -= temp;
+            this.accountBalence = accountBalence-temp;
             System.out.println("This time your account balance is = "+accountBalence);
         }
 
-        System.out.print("if you want to re chack so enter a 1 otherwise enter any othe key:");
+        System.out.print("if you want to re check so enter a 1 otherwise enter any othe key:");
         int chack = sc.nextInt();
         if(chack==1){
             Change();
@@ -82,10 +84,20 @@ class UserAccount{
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter invest amount : ");
         int temp = sc.nextInt();
-        accountBalence += temp;
+        this.accountBalence = accountBalence+temp;
         System.out.println("This time your account balance is = "+accountBalence);
         
-        System.out.print("if you want to re chack so enter a 1 otherwise enter any othe key :");
+        System.out.print("if you want to re check so enter a 1 otherwise enter any othe key :");
+        int chack = sc.nextInt();
+        if(chack==1){
+            Change();
+        }
+    }
+    public void check(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Your account balance is = "+accountBalence);
+
+        System.out.print("if you want to re check so enter a 1 otherwise enter any othe key :");
         int chack = sc.nextInt();
         if(chack==1){
             Change();
