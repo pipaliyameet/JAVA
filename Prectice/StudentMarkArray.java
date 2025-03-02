@@ -16,8 +16,7 @@ public class StudentMarkArray{
                 // System.out.println("student number "+(i+1)+" is pass");
             }
             else{
-
-                
+                    
                 // System.out.println("student number "+(i+1)+" is fail");
             }
             count++;
