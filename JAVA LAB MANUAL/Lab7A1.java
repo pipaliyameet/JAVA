@@ -12,6 +12,7 @@ class Student{
     String[] gradeObtained;
     double sumOfCradite = 0;
     double sumOfTotalCradite = 0;
+    
     double spi;
 
     public Student(int idNumber , int numberOfSubjectsRegistered){
@@ -20,7 +21,7 @@ class Student{
         subjectCode = new int[numberOfSubjectsRegistered];
         this.subjectCredits = new int[numberOfSubjectsRegistered];
         gradeObtained = new String[numberOfSubjectsRegistered];
-        
+
         for(int i=0 ; i<this.numberOfSubjectsRegistered ; i++){
             sumOfTotalCradite += this.subjectCredits[i];
             if(this.gradeObtained.equals("A")){
