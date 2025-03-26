@@ -26,7 +26,7 @@ class User{
         System.out.print("Enter user password : ");
         this.password = sc.nextLine();
 
-        Journey();
+        viweBooking();
     }
 
     public void logOut(){
@@ -64,6 +64,14 @@ class User{
         System.out.println("if you prefer 1st class so enter 1 or 2nd class so enter 2 or 3rd class so enter 3 : ");
         int temp = sc.nextInt();
     }
+}
+
+class Train{
+String trainID;
+String trainName;
+String trainType;
+int[] seats;
+int schedule;
 }
 public class MainClass {
     public static void main(String[] args){
