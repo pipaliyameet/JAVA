@@ -67,11 +67,18 @@ class User{
 }
 
 class Train{
-String trainID;
-String trainName;
-String trainType;
-int[] seats;
-int schedule;
+    String trainID;
+    String trainName;
+    String trainType;
+    int[] seats;
+    int schedule;
+
+    public void TrainInfo(){
+        
+        
+    }
+
+
 }
 public class MainClass {
     public static void main(String[] args){

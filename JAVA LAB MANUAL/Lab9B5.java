@@ -47,9 +47,20 @@ class Rectangle implements Shape{
 public class Lab9B5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         System.out.print("if you clculet rectengle area so enter 1 or triangle so enter 2 or circle so enter 3 : ");
-    
+        int temp = sc.nextInt();
 
+        if(temp==1){
+            Rectangle obj1 = new Rectangle();
+            System.out.println("Rectangle area is "+obj1.getArea());
+        }
+        else if(temp==2){
+            Triangle obj1 = new Triangle();
+            System.out.println("Triangle area is "+obj1.getArea());
+        }
+        else if(temp==3){
+            Circle obj1 = new Circle();
+            System.out.println("Circle area is "+obj1.getArea());
+        }
     }
 }
