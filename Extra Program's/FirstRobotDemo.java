@@ -1,8 +1,4 @@
-
 import java.awt.Robot;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
 
 public class FirstRobotDemo extends Thread{
     public static void main(String[] args){
