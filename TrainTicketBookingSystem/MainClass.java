@@ -1,11 +1,39 @@
 import java.util.Scanner;
 
 class User{
+
     String userId;
     String userName;
     String userEmailId;
     String phoneNumber;
     String password;
+
+    public User() {
+        Scanner sc = new Scanner(System.in);
+
+        while (true) { 
+            System.out.println("if you resister so enter 1 or if you login so enter 2 or if you updet profile so enter 3 or if you Book tickt so enter 4 ");
+            int temp = sc.nextInt();
+
+            if(temp==1){
+                resister();
+            }
+            else if(temp==2){
+                login();
+            }
+            else if(temp==3){
+                updatProfile();
+            }
+            else if(temp==4){
+                viweBooking();
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+    
     static int[] distance = {0,15,30,70,120};
 
     public void resister(){
@@ -26,7 +54,6 @@ class User{
         System.out.print("Enter user password : ");
         this.password = sc.nextLine();
 
-        viweBooking();
     }
 
     public void logOut(){
@@ -63,39 +90,53 @@ class User{
 
         System.out.println("if you prefer 1st class so enter 1 or 2nd class so enter 2 or 3rd class so enter 3 : ");
         int temp = sc.nextInt();
+        System.out.println("if you gate more informetion about tarin so enter 1 : ");
+        temp = sc.nextInt();
+        if(temp==1){
+            Train obj = new Train();
+        }
     }
 }
 
 class Train{
+
     String trainID;
     String trainName;
     String trainType;
     int[] seats;
     int schedule;
 
-    public void TrainInfo(){
-        
-        
+    public Train() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("if you chack avilable sheet so enter 1 : ");
+        int temp = sc.nextInt();
+        if (temp==1){
+            TrainInfo();
+        }
     }
 
-
+    public void TrainInfo(){
+        System.out.println("Avilable sheet is = "+((int)(Math.random()*100)));
+    }
 }
 public class MainClass {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        User[] a = new User[100];
-        int i=0;
-        while(true){
-            System.out.println("if you booking ticket so enter 1 or you chack your dtail so enter any other key  :");
-            int temp = sc.nextInt(); 
-            if(temp==1){
-                a[i] = new User();
-                i++;
-            }
-            else{
+        User u1 = new User();
 
-            }
-        }
+        // User[] a = new User[100];
+        // int i=0;
+        // while(true){
+        //     System.out.println("if you booking ticket so enter 1 or you chack your dtail so enter any other key  :");
+        //     int temp = sc.nextInt(); 
+        //     if(temp==1){
+        //         a[i] = new User();
+        //         i++;
+        //     }
+        //     else{
+
+        //     }
+        // }
     }
 }
