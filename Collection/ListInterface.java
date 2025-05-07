@@ -4,11 +4,9 @@ public class ListInterface {
         Scanner sc = new Scanner(System.in);
 
         List<String> s1 = new ArrayList<String>();
-
-        // s1.add("Meet");
-        // s1.add("Pipaliya");
+        s1.add("Meet");
+        s1.add("Pipaliya");
         // s1.addAll("Meet", "PipaLiya");
-
         System.out.println("ArrayList elements : ");
         System.out.println("\t"+s1);
 
