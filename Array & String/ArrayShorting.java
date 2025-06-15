@@ -9,21 +9,20 @@ public class ArrayShorting{
             System.out.print("Enter element number "+(i+1)+" : ");
             a[i]=sc.nextInt();
         }
-        
         for(int i=0 ; i<a.length ; i++){
-            int count=0;
             for(int j=i ; j<a.length ; j++){
-                if(j<i){
-                    count = j;
+                if(a[j]<a[i]){
+                    int temp = a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
                 }
-                else if(j>i){
-                    count = i;
-                }
-                else if(j==(a.length-1)){
-                    count = j;
+                else{
+                    a[i]=a[i];
                 }
             }
-            System.out.print(count+" ");
+        }
+        for(int i=0 ;i<a.length ;i++){
+            System.out.print("Element number "+i+"is = "+a[i]+"\n");
         }
     }
 }
